@@ -7,7 +7,7 @@
 
 <nav class="fixed top-0 z-50 w-full bg-black/50">
   <div class="container-3xl flex items-center py-4 text-white">
-    <h1 class="mr-auto text-xl">LIFU</h1>
+    <h1 class="mr-auto whitespace-nowrap border-l border-white pl-2 text-xl">Fake Website</h1>
     <ul class="flex w-full justify-end gap-6">
       <li><button on:click={() => parallax.scrollTo(1)}>Home</button></li>
       <li><button on:click={() => parallax.scrollTo(2)}>Price</button></li>
@@ -16,7 +16,7 @@
   </div>
 </nav>
 
-<Parallax bind:this={parallax} sections={3}>
+<Parallax bind:this={parallax} sections={2.5} class="bg-black">
   <ParallaxLayer
     rate={-0.3}
     span={1}
@@ -40,11 +40,24 @@
     <div class="container-3xl flex h-full items-center">
       <FadeInOnVisible class="sm:grid sm:grid-cols-2">
         <h1 class="text-[4rem]">Price</h1>
-        <p>
+        <p class="border-l border-black pl-2">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo modi quas totam, dolorem
           aut accusamus. Dolorum sequi iste sapiente explicabo.
         </p>
       </FadeInOnVisible>
+    </div>
+  </ParallaxLayer>
+
+  <ParallaxLayer rate={0} offset={2} span={0.5} class="bg-gray-700">
+    <div class="container-3xl flex h-full items-center text-white">
+      <ul class="grid w-full grid-cols-2 gap-4">
+        <li>sponsor</li>
+        <li>sponsor</li>
+        <li>sponsor</li>
+        <li>sponsor</li>
+        <li>sponsor</li>
+        <li>sponsor</li>
+      </ul>
     </div>
   </ParallaxLayer>
 </Parallax>
